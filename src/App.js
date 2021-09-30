@@ -1,24 +1,66 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './Components/Home/Home';
+import Mealbd from './Components/Mealbd/Mealbd';
+import Header from './Components/Header/Header';
+import SelectedCatagory from './Components/SelectedCatagory/SelectedCatagory';
+import FoodDetails from './Components/FoodDetails/FoodDetails'
+import Chart from './Components/Chart/Chart';
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+
+      <BrowserRouter>
+        <Header></Header>
+
+        <Switch>
+          <Route path="/home">
+            <Home></Home>
+
+
+          </Route>
+          <Route path="/meal">
+            <Mealbd></Mealbd>
+
+
+          </Route>
+          <Route path="/catagori/:cataName">
+            <SelectedCatagory></SelectedCatagory>
+
+
+
+          </Route>
+          <Route path="/fooddetails/:foodName">
+            <FoodDetails></FoodDetails>
+
+
+
+          </Route>
+          <Route path="/chart">
+            <Chart></Chart>
+
+
+
+          </Route>
+        </Switch>
+
+
+
+
+      </BrowserRouter>
+
+    </div >
   );
 }
 
