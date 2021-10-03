@@ -13,6 +13,7 @@ const ViewSearchfood = (props) => {
     const { strMeal, strInstructions, strMealThumb, } = props.meal;
 
 
+
     return (
         <Col>
             <Card className="p-3 m-2">
@@ -20,7 +21,7 @@ const ViewSearchfood = (props) => {
                 <Card.Body>
                     <Card.Title>{strMeal}</Card.Title>
                     <Card.Text>
-                        {strInstructions.slice(0, 40)}
+                        {strInstructions.slice(0, 40)}...
                     </Card.Text>
                 </Card.Body>
                 <Button className="text-white" variant="info" onClick={foodDetails}>View Details</Button>

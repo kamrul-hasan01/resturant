@@ -19,7 +19,7 @@ const Catagori = (props) => {
                 <Card.Body>
                     <Card.Title>{strCategory}</Card.Title>
                     <Card.Text>
-                        {strCategoryDescription.slice(0, 35)}
+                        {strCategoryDescription.slice(0, 35)}...
                     </Card.Text>
 
                     <Button className="text-white" variant="info" onClick={viewDetails}>View List</Button>

@@ -15,7 +15,7 @@ const SelectedFoodList = (props) => {
             <Card className="shadow-lg rounded">
                 <Card.Img variant="top" src={strMealThumb} />
                 <Card.Body>
-                    <Card.Title>{strMeal.slice(0, 16)}</Card.Title>
+                    <Card.Title>{strMeal.slice(0, 16)} ... </Card.Title>
 
                     <Button className="text-white" variant="info" onClick={foodDetails}>View Details</Button>
                 </Card.Body>

@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <div>
             <div className="d-flex justify-content-center p-5">
-                <Form.Control onChange={searchingFood} className="w-50" type="email" placeholder="Search your Favourite ♥" />
+                <Form.Control onChange={searchingFood} className="w-50" type="text" placeholder="Search your Favourite ♥" />
             </div>
             <div className="container">
                 {meals.length === 0 ? <div className="d-flex justify-content-center m-5"><Spinner animation="grow" variant="info" /></div>
